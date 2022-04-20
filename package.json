@@ -6,7 +6,9 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest",
-    "swiper": "^8.1.1"
+    "nuxt": "3.0.0-rc.1"
+  },
+  "dependencies": {
+    "swiper": "^8.1.3"
   }
 }
