@@ -1,24 +1,20 @@
 <script setup lang="ts">
-import { useInfiniteScroll } from "@vueuse/core";
+import { VueEternalLoading } from "@ts-pro/vue-eternal-loading";
 
-const el = ref<HTMLElement>(null);
 const data = ref([1, 2, 3, 4, 5, 6]);
 
-useInfiniteScroll(
-  el,
-  () => {
-    console.log("[*] loading more...");
-    data.value.push(Math.floor(Math.random() * 100));
-  },
-  { distance: 10 }
-);
+const onLoad = ({ loaded }) => {
+  data.value.push(Math.floor(Math.random() * 100));
+  loaded(4, 4);
+};
 </script>
 
 <template>
-  <div ref="el" class="container">
+  <div class="container">
     <div v-for="item in data">
       {{ item }}
     </div>
+    <VueEternalLoading :load="onLoad" />
   </div>
 </template>
 
