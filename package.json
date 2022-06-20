@@ -9,7 +9,6 @@
     "nuxt": "^3.0.0-rc.4"
   },
   "dependencies": {
-    "@ts-pro/vue-eternal-loading": "^1.2.0",
-    "@vueuse/core": "^8.7.3"
+    "@ts-pro/vue-eternal-loading": "^1.2.0"
   }
 }
